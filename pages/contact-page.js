@@ -1,16 +1,18 @@
 import Layout from "../components/Layout";
-import Image from "next/image";
+import Image from "next/image"
 
-export default function Contact() {
+const Contact = () => {
   return (
+    // /component/Layoutをフォーマットとしている
     <Layout title="Contact">
       <div className="bg-white text-center shadow-xl p-8 w-80 rounded">
         <div className="mt-4">
           <p className="font-bold">Contact info</p>
         </div>
         <div className="flex justify-center mt-4">
+          {/* Image Component */}
           <Image
-            className="rounded-full"
+            className="roundef-full"
             src="/avatar.jpg"
             width={60}
             height={60}
@@ -25,6 +27,7 @@ export default function Contact() {
           <p className="font-bold mt-3">Phone</p>
           <p className="text-xs mt-2 text-gray-600">000-123-456</p>
         </div>
+
         <div className="mt-6 flex justify-around">
           <div>
             <a
@@ -79,4 +82,6 @@ export default function Contact() {
       </div>
     </Layout>
   );
-}
+};
+
+export default Contact

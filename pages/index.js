@@ -1,8 +1,10 @@
-import Layout from "../components/Layout";
+import Layout from "../components/Layout"
+
 export default function Home() {
   return (
+    // component/Layout関数のreturnを表示
     <Layout title="Home">
-      <p className="text-4xl">Welcome to Nextjs</p>
+      <p>layout</p>
     </Layout>
-  );
+  )
 }

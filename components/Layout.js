@@ -1,10 +1,13 @@
-import Head from "next/head";
-import Link from "next/link";
-import Image from 'next/image'
+import Head from "next/head"
+import Link from "next/link"
 
+// 基本的なLayout
+// chilren：page内のtext
+// title：画面タイトル
 export default function Layout({ children, title = "HP by Nextjs" }) {
   return (
     <div className="flex justify-center items-center flex-col min-h-screen text-gray-600 text-sm font-mono">
+      {/* Head Component */}
       <Head>
         <title>{title}</title>
       </Head>
@@ -12,19 +15,22 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
         <nav className="bg-gray-800 w-screen">
           <div className="flex items-center pl-8 h-14">
             <div className="flex space-x-4">
+              {/* Link Component */}
               <Link href="/">
                 <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
                   Home
                 </a>
               </Link>
+              {/* Link Component */}
               <Link href="/blog-page">
                 <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
                   Blog
                 </a>
               </Link>
+              {/* Link Component */}
               <Link href="/contact-page">
                 <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
-                  Contact
+                  Contact Page
                 </a>
               </Link>
             </div>
@@ -35,15 +41,9 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
         {children}
       </main>
       <footer className="w-full h-12 flex justify-center items-center border-t">
-        <a
-          className="flex items-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          {/* <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" /> */}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+        <a className="flex items-center" href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" target="_blank" rel="noopener noreferrer">
+          Powerd by{""}
+          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
         </a>
       </footer>
     </div>
