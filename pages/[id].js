@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Layout from "../../components/Layout";
-import { getAllPostsIds, getPostData } from "../../lib/posts";
+import Layout from "../components/Layout";
+import { getAllPostsIds, getPostData } from "../lib/posts";
 
 // getStaticPropsで返す値をpropsとして受け取る
 export default function Post({ post }) {

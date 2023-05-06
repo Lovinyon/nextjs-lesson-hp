@@ -5,7 +5,7 @@ const Post = ({ post }) => {
     <div>
       <span>{post.id}</span>
       {" : "}
-      <Link href={`/posts/${post.id}`}>
+      <Link href={`/${post.id}`}>
         <span className="cursor-pointer text-blue-500 border-b border-blue-500 hober]bg-gray-200">{post.title}</span>
       </Link>
     </div>
